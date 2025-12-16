@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h3>🚨 Portal de Problemas Urbanos - Belo Vale</h3></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsivo.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Portal Cidadão Ativo 🚨</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="main-title">🚧 Reportar Problemas Urbanos</h1>
+        <p class="descricao">
+            Nosso município, nossa responsabilidade! Aqui você pode <strong>reportar problemas urbanos</strong> como buracos nas ruas, postes caídos, vazamentos de água, iluminação pública com defeito, lixo acumulado e outros serviços que precisam de atenção.<br>
+            Sua contribuição ajuda a tornar nossa cidade mais segura e organizada para todos.
+        </p>
+        
+        <div class="categorias">
+            <h2>📋 Tipos de Problemas que Você pode Reportar:</h2>
+            <div class="categoria-grid">
+                <div class="categoria-item">
+                    <span class="icone">🛣️</span>
+                    <span>Buraco na Rua</span>
+                </div>
+                <div class="categoria-item">
+                    <span class="icone">💡</span>
+                    <span>Iluminação Pública</span>
+                </div>
+                <div class="categoria-item">
+                    <span class="icone">🚰</span>
+                    <span>Vazamento de Água</span>
+                </div>
+                <div class="categoria-item">
+                    <span class="icone">🗑️</span>
+                    <span>Coleta de Lixo</span>
+                </div>
+                <div class="categoria-item">
+                    <span class="icone">⚠️</span>
+                    <span>Poste Caído</span>
+                </div>
+                <div class="categoria-item">
+                    <span class="icone">🚸</span>
+                    <span>Sinalização</span>
+                </div>
+            </div>
+        </div>
+
+        <form id="formulario" method="POST" action="salvar.php">
+            <fieldset>
+                <legend>📝 Detalhes da Ocorrência</legend>
+
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+
+                <label for="email">E-mail para contato:</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+
+                <label for="telefone">Telefone (opcional):</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(31) 99999-9999">
+
+                <label for="solicitacao">Descreva o problema encontrado (Inclua Endereço Exato):</label>
+                <textarea id="solicitacao" name="solicitacao" required placeholder="Exemplo: 'Buraco grande na Rua das Flores, próximo ao número 123, causando risco para motoristas e pedestres...'"></textarea>
+
+                <div class="urgencia">
+                    <label>Nível de urgência:</label>
+                    <div class="urgencia-options">
+                        <label class="radio-label baixa"><input type="radio" name="urgencia" value="baixa"> Baixa</label>
+                        <label class="radio-label media"><input type="radio" name="urgencia" value="media" checked> Média</label>
+                        <label class="radio-label alta"><input type="radio" name="urgencia" value="alta"> Alta</label>
+                    </div>
+                </div>
+
+                <button type="submit">🚨 Reportar Problema</button>
+            </fieldset>
+        </form>
+        
+        <div class="info-extra">
+            <p>⚠️ <strong>Importante:</strong> Em casos de emergência (postes com fios expostos, grandes vazamentos, etc.), ligue para a Defesa Civil: <span class="phone-number">199</span></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portal Cidadão Ativo. Sua voz em Belo Vale.</p>
+        <div class="footer-links">
+            <a href="#">Termos de Uso</a> |
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Acesso Administrador</a>
+        </div>
+    </footer>
+</body>
+</html>

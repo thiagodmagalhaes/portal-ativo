@@ -1,0 +1,306 @@
+/* Paleta: Azul Institucional (#2980b9), Alerta/Ação (#e67e22), Fundo (#f9fbfd) */
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f4f6f9; /* Fundo suave */
+    color: #34495e; 
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 30px 40px;
+}
+
+/* --- 1. Cabeçalho (Header) --- */
+
+header {
+    background: #2980b9; /* Azul principal */
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-icon {
+    font-size: 2.5em;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.header-content h1 {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    margin: 0;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* --- 2. Títulos e Descrição --- */
+
+.main-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* --- 3. Seção de Categorias (Interativo) --- */
+
+.categorias h2 {
+    font-size: 1.4em;
+    color: #2980b9;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.categoria-item {
+    background: #fff;
+    border: 1px solid #dce1e7;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.categoria-item:hover {
+    border-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(230, 126, 34, 0.2);
+}
+
+.categoria-item .icone {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* --- 4. Formulário e Campos --- */
+
+form fieldset {
+    border: 1px solid #dce1e7;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+legend {
+    font-size: 1.5em;
+    color: #2980b9;
+    font-weight: 600;
+    text-align: left;
+    padding: 0 10px;
+    margin-left: -10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #fcfdfe;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* --- 5. Urgência (Radio Buttons Interativos) --- */
+
+.urgencia {
+    margin-top: 25px;
+}
+
+.urgencia-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-label {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #f9f9f9;
+}
+
+.radio-label input[type="radio"] {
+    display: none; /* Esconde o radio button nativo */
+}
+
+/* Estilos para cada nível de urgência */
+.radio-label.baixa { border-color: #2ecc71; color: #2ecc71; }
+.radio-label.media { border-color: #f1c40f; color: #f1c40f; }
+.radio-label.alta { border-color: #e74c3c; color: #e74c3c; }
+
+/* Estilo quando o radio button está checado */
+.radio-label input[type="radio"]:checked + span { 
+    font-weight: bold; 
+    color: #fff;
+    display: block;
+    line-height: 1.5; /* Garante que o texto dentro do span é centralizado */
+}
+
+.radio-label.baixa input[type="radio"]:checked ~ span { background: #2ecc71; border-color: #2ecc71; }
+.radio-label.media input[type="radio"]:checked ~ span { background: #f1c40f; border-color: #f1c40f; }
+.radio-label.alta input[type="radio"]:checked ~ span { background: #e74c3c; border-color: #e74c3c; }
+
+/* Adiciona um span temporário para aplicar o background ao texto da label */
+.urgencia-options label { position: relative; }
+.urgencia-options label span { display: block; padding: 0; }
+
+
+/* --- 6. Botão de Ação --- */
+
+button[type="submit"] {
+    width: 100%;
+    background: #e67e22; /* Laranja de Ação */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 0;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+button[type="submit"]:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(211, 84, 0, 0.5);
+}
+
+/* --- 7. Informações Extras / Emergência --- */
+
+.info-extra {
+    margin-top: 40px;
+    padding: 15px 25px;
+    background: #fff3cd; /* Cor de alerta suave (amarelo) */
+    border: 1px solid #ffeeba;
+    border-left: 5px solid #ffc107; /* Borda lateral de destaque */
+    border-radius: 8px;
+    color: #856404;
+}
+
+.info-extra strong {
+    font-weight: 700;
+}
+
+.phone-number {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #e74c3c; /* Vermelho de emergência */
+}
+
+/* --- 8. Rodapé (Footer) --- */
+
+footer {
+    background: #34495e; /* Azul Escuro */
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #2980b9;
+}
+
+/* --- Responsividade (Ajustado) --- */
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    .main-title {
+        font-size: 1.5em;
+    }
+    .header-content h1 {
+        font-size: 1.3em;
+    }
+    .categoria-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+    }
+    .urgencia-options {
+        flex-direction: column; /* Colunas na urgência */
+    }
+}
+
+@media (max-width: 400px) {
+    .categoria-grid {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+}
