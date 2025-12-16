@@ -12,6 +12,7 @@ Após o envio, o usuário é redirecionado para uma página de agradecimento. O 
 - `criar_tabela.sql`: Script SQL para criar a tabela no banco de dados.
 - `css/`: Pasta contendo os arquivos de estilo CSS (`style.css` e `responsivo.css`).
 -  `Narrativa.doc`: Contendo toda narrativa explicando o contexto do problema e a solução proposta.
+- `diagrama de casos de uso.png` : Diagrama contendo o casos de uso do portal.
 
 ## Pré-requisitos
 
